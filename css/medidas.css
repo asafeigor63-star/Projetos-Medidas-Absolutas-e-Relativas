@@ -1,0 +1,458 @@
+/* CONGIFURAÇÕES GERAIS E RESET*/
+
+/* O seletor universal (*) aplica as regras absoluamente todos os elementos da página.
+-Margin/padding: remove as margens e espaçamentos padrão que os navegadore colocam.
+-Border-box garante que a largura (width) e a altura (height) incluam as bordas e os paddings, evitando que o layout quebre ou fique maior do que o planejado.
+*/ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Delimita o tamanho da página web para não "vazar" o conteúdo */
+}
+
+body{
+    font-family: 'Segoe UI', 'Tahoma', Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estrutura base da página (layout principal) */
+
+/* Cabeçalho principal da aplicação */
+
+header{
+    background-color: #2c3e50;
+    box-shadow: 0 4px 6px #6f6f6f;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+header h1{
+    font-size: 2.5em; /* Multiplica o tamanho da fonte */
+    margin-bottom: 10px;
+}
+
+header p{
+    font-size: 1.1em;
+    opacity: 0.9;  /* torna o texto ligeiramente transparente */
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* BLOCO DE SEÇÃO */
+
+.section{
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px #6f6f6f;
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.section h2{
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px dashed #3498db;
+}
+
+.section h3{
+    color: #34495e;
+    font-size: 1.3em;
+    margin: 15px;
+    margin-top: 25px;
+}
+
+/* CONCEITO DE MEDIDAS ABSOLUTAS (PX) */
+
+/* Pixels (px) são unidades absolutas. Elas possuem o mesmo tamanho exato independentemente do tamanho da tela ou das configurações do usuário */
+
+.demo-absolute{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.box-absolute-pequeno{
+    align-items: center;
+    background-color: #674c3c;
+    border: 2px solid #c0392b;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    font-size: 12px;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+}
+
+.box-absolute-medio{
+align-items: center;
+background-color: #674c3c;
+border: 2px solid #c0392b;
+color: white;
+display: flex;
+font-weight: bold;
+font-size: 21px;
+justify-content: center;
+height: 120px;
+width: 200px;
+}
+
+.box-absolute-grande{
+    align-items: center;
+    background-color: #674c3c;
+    border: 2px solid #c0392b;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    font-size: 36px;
+    justify-content: center;
+    height: 150px;
+    width: 300px;
+    }
+
+  /*  medidas relativas */
+
+  /*
+  A porcentagem (%) é relativa ao tamanho do elemento PAI (container).
+  Se o PAI (container), o elemeno filho (section) encolhe proporcionalmente (essencial para design responsivo)
+  
+  Responsivo:
+  
+  */
+
+
+  .demo-relative{
+
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+  }
+
+  .box-relative-25{
+    align-items: center;
+    background-color: #3498db;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    height: 80px;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 25%;
+  }
+
+  .box-relative-50{
+    align-items: center;
+    background-color: #3498db;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    height: 80px;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 50%;
+  }
+
+  .box-relative-75{
+    align-items: center;
+    background-color: #3498db;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    height: 80px;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 75%;
+  }
+
+  .box-relative-100{
+    align-items: center;
+    background-color: #3498db;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    height: 80px;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .demo-margin{
+
+    background-color: #ffe082;
+    padding: 20px;
+    border: 3px dashed #fbc02d;
+    margin: 20px 0;
+    border-radius: 5px;
+
+  }
+
+/* Elementos configurados em inline-block respeitam margens e aceitam largura e atura. Ou seja, consigo definir qual o elemento vai ter dentro da página.
+
+*/
+
+.box-margin-small {
+    background-color: #fff9c4;
+    padding: 15px;
+    border: 2px solid #f57f17;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block; /* Display: serve para definir um elemento que deve ocupar toda a largura disponivel. Forçando uma quebra de linha antes e depois dele*/
+}
+
+.box-margin-medium{
+    background-color: #fff9c4;
+    padding: 15px;
+    border: 2px solid #f57f17;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.box-margin-large{
+    background-color: #fff9c4;
+    padding: 15px;
+    border: 2px solid #f57f17;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.demo-padding{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 0
+}
+
+.box-paddind-small{
+    background-color: #81c784;
+    padding: 20px;
+    border: 2px solid #388e3c;
+    color: white;
+    font-weight: bold;
+}
+
+.box-paddind-medium{
+    background-color: #81c784;
+    padding: 20px;
+    border: 2px solid #388e3c;
+    color: white;
+    font-weight: bold;
+}
+
+.box-paddind-large{
+    background-color: #81c784;
+    padding: 20px;
+    border: 2px solid #388e3c;
+    color: white;
+    font-weight: bold;
+}
+
+/*Conceito: margin + padding combinados*/
+
+/* Demonstração visual de como o margin ( fora ) e o padding ( dentro ) atuam */
+
+.demo-combined{
+    background-color: #e1bee7;
+    border: 3px dashed #7b1fa2;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 30px;
+}
+
+.box-combined{
+    background-color: #e1bee7;
+    border: 2px dashed #7b1fa2;
+    border-radius: 5px;
+    padding: 25px;
+    color: white;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.demo-em-rem{
+    background-color: #f3e5f5;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border: 2px solid #9c27b0;
+}
+
+.box-em{
+    background-color: #f3e5f5;
+    border: 2px solid #9c27b0;
+    color: #4a148c;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold; 
+    padding: 1.5em;
+    margin: 1em;
+}
+
+.box-rem{
+    background-color: #e1bee7;
+    padding: 1.5rem;
+    margin: 1rem;
+    border: 2px solid #7b1fa2;
+    font-size: 1.2rem;
+    font-weight: bold; 
+    color: #4a148c;
+    display: inline-block;
+border-radius: 4px;
+}
+
+.highlight{
+    background-color: #ffeaa7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+
+}
+
+.dica{
+    background-color: #e3f2fd;
+    border-left: 5px solid #2196f3;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.atencao{
+    background-color: #fff3e0;
+    border-left: 5px solid #ff9800;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Tabelas Corporativas */
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td{
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th{
+    background-color: #f2f2f2;
+    color: #2c3e50;
+}
+
+tr:nth-child(even){
+    background-color: #81c784;
+}
+
+.code-example{
+    background-color: #2d3748;
+    color: #f7fafc;
+    padding: 15px;
+    border-radius: 6px;
+    margin: 15px 0;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax (250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card{
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0.05);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-image{
+    background-color: #bdc3c7;
+    color: #fff;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2em;
+
+}
+
+.card-content{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+}
+
+.card-content h3{
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card-content p{
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+    flex-grow: 1;
+
+}
+
+.card-button{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: backgrond-color 0.2s;
+
+}
+
+.card-button:hover{
+    background-color: #2980b9;
+
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+
+}
+
